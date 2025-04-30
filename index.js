@@ -24,10 +24,7 @@ app.get("/", async(req, res)=>{
         throw new error
     }
 })
-app.get("/x", async(req, res)=>{
-        res.send("hello")
-    
-})
+
 app.post("/msg", async(req, res)=>{
     const {msg} = req.body;
     if(!msg) return res.status(400).json({msg: "msg is required"})
