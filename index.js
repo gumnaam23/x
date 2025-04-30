@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: true}))
 
 
 app.use(cors({
-  origin: "http://localhost:5173/",  // React app ka origin
+  origin: "http://localhost:5173",  // React app ka origin
   credentials: true                 // important for cookies/auth
 }));
 
