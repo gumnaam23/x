@@ -42,7 +42,10 @@ app.post("/msg", async(req, res)=>{
 
 })
 
-mongoose.connect("mongodb+srv://aqibdev23:oGXUhNOTAVp02G27@cluster0.swqejm2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://aqibdev23:oGXUhNOTAVp02G27@cluster0.swqejm2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+                 {
+                   dbname: user
+                 })
 .then(()=>console.log("mongodb connected"))
 .catch((err)=> console.log("database connection err", err))
 
