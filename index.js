@@ -19,7 +19,8 @@ app.get("/", async(req, res)=>{
     try {
         const msg = await Msg.find({})
         res.send("hello")
-        res.status(200).json({msg})
+        console.log(msg)
+        res.status(200).json({msg: msg})
     } catch (error) {
         throw new error
     }
