@@ -18,7 +18,7 @@ app.use(cors({
 app.get("/", async(req, res)=>{
     try {
         const msg = await Msg.find({})
-        res.status(200).json({msg: msg})
+        res.send({msg})
     } catch (error) {
         throw new error
     }
